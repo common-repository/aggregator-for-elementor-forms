@@ -1,0 +1,224 @@
+/**
+ * Style for Forms list page. 
+ * @version 1.0 
+ * @since 1.0
+ */
+div#wpcontent {
+	padding-left: 0px;
+}
+
+div#cfse-all-forms {
+	margin-top: 20px;
+	padding: 20px;
+}
+
+div#cfse-all-forms__header {
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 500;
+	margin-bottom: 40px;
+	background-image: url(../img/forms--multi.svg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 50px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	padding-left: 60px;
+}
+
+div#cfse-all-forms__table-wrapper {}
+
+table#cfse-forms-table {
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: 5px;
+	background-color: #fff;
+	position: relative;
+}
+
+thead#cfse-forms-table__thead {
+	height: 40px;
+	background-color: #6e7bd9;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+tr.cfse-forms-table__tr.cfse-forms-table__tr--thead {
+}
+
+tr.cfse-forms-table__tr--thead {}
+
+th.cfse-forms-table__th.cfse-forms-table__hd {
+	color: #fff;
+	font-weight: 500;
+}
+input.cfse-forms-table__notf-email {
+	background-color: transparent;
+	border: 0px;
+	pointer-events: none;
+	text-align: center;
+	font-size: 13px;
+}
+.cfse-forms-table__hd:first-child {
+	
+padding-left: 10px;
+}
+td.cfse-forms-table__td.cfse-forms-table__hd:first-child:before {
+	content: counter(cfse_forms);
+}
+
+tr.cfse-forms-table__tr.cfse-forms-table__tr--tbody {
+	height: 40px;
+	text-align: center;
+	counter-increment: cfse_forms;
+}
+
+tr.cfse-forms-table__tr.cfse-forms-table__tr--tbody:nth-child(even) {
+	background-color: #f5f5f5;
+}
+
+tbody#cfse-forms-table__tbody {
+	counter-reset: cfse_forms;
+	border: 1px solid #ddd;
+	box-shadow: 5px 8px 7px 0px #5e5e5e;
+}
+.cfse-table-action-buttons {
+}
+
+.cfse-table-action-button {
+	width: 25px;
+	height: 25px;
+	margin: 5px;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #6e7bd9;
+}
+.cfse-table-action-buttons__all-modes {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cfse-table-action-buttons__edit-mode.cfse-table-action-buttons__all-modes {
+	display: none;
+}
+
+.cfse-table-action-button.cfse-table-action-button__save {
+	background-color: #2E7D32;
+	width: 40px;
+	height: 30px;
+	background-image: url(../img/save--white.svg);
+	background-size: 16px;
+}
+
+.cfse-table-action-button.cfse-table-action-button__cancel {
+	height: 30px;
+	width: 35px;
+	background-color: #E91E63;
+	background-image: url(../img/cancel--white.svg);
+	background-size: 15px;
+}
+.cfse-table-action-button.loading {
+	background-image: url(../img/rolling--white.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px;
+	pointer-events: none;
+}
+
+.cfse-table-action-button__full-edit {
+	background-image: url(../img/settings--white.svg);
+	background-size: 15px;
+}
+.cfse-table-action-button__edit {
+	background-image: url(../img/edit--white.svg);
+	background-size: 13px;
+}
+/*****
+*** Edit mode
+*******/
+tr.cfse-editing.cfse-forms-table__tr.cfse-forms-table__tr--tbody {
+	background-color: #ffc10769;
+}
+
+tr.cfse-editing > td:last-child > .cfse-table-action-buttons > .cfse-table-action-buttons__normal-mode {
+	display: none;
+}
+tr.cfse-editing > td:last-child > .cfse-table-action-buttons > .cfse-table-action-buttons__edit-mode {
+    display:flex;
+}
+tr.cfse-editing > td:nth-last-child(2) > .cfse-forms-table__notf-email {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin: 10px 0;
+	pointer-events: all;
+}
+/*****
+**Empty forms 
+******/
+tr.crfe-no-forms-row {
+	position: absolute;
+	background-color: #fff;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.crfe-no-forms-row {}
+
+.crfe-no-forms-row__icon {
+	height: 100px;
+	width: 100px;
+	margin: auto;
+	background-image: url(../img/empty_box--multi.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 66px;
+}
+.crfe-no-forms-row__texts{
+	font-family: 'Montserrat', sans-serif;
+}
+.crfe-no-forms-row__btext {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: #000;
+}
+
+.crfe-no-forms-row__stext {
+	width: 90%;
+	max-width: 350px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	color: #a1a1a1;
+	font-size: 14px;
+}
+
+.cfse-toast {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	padding: 10px 20px;
+	border-radius: 4px;
+	display:none;
+}
+
+.toast-type--error {
+	background-color: #c5261a;
+	color: #fff;
+}
+
+.toast-type--success {
+	background-color: #2bc51a;
+	color: #fff;
+}
